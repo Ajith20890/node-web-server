@@ -14,9 +14,9 @@ app.set('view engine','hbs');
 
 
 
-app.use((req,res,next)=>{
-  res.render('maintainance.hbs');
-});
+// app.use((req,res,next)=>{
+//   res.render('maintainance.hbs');
+// });
 
 app.use(express.static(__dirname+'/public'));
 
@@ -51,6 +51,13 @@ app.get('/about',( req,res)=>{
 //res.send('This is about page')
 res.render('about.hbs',{
   pageTitle:'About Page'
+});
+});
+
+app.get('/Projects',( req,res)=>{
+//res.send('This is about page')
+res.render('Projects.hbs',{
+  pageTitle:'Project main Page'
 });
 });
 
